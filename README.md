@@ -1,6 +1,6 @@
 # 🥋 Jiu-Jitsu Master App
 
-Aplicativo exclusivo para alunos particulares do mestre [Nome do Mestre]. Permite o acesso a vídeos de treino, técnicas e dicas personalizadas.
+Aplicativo exclusivo para alunos particulares do mestre Niel. Permite o acesso a vídeos de treino, técnicas e dicas personalizadas.
 
 ## 🚀 Tecnologias
 
