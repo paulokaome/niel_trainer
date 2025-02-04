@@ -4,7 +4,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 
 type AuthContextType = {
   isAuthenticated: boolean;
-  login: (user:string, password:string) => void;
+  login: (user: string, password: string) => void;
   logout: () => void;
 };
 
@@ -17,31 +17,32 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const loadAuthState = async () => {
       const token = await AsyncStorage.getItem('userToken');
-      console.log(token)
+      console.log(token);
       if (token) {
         setIsAuthenticated(true);
-        router.replace("/home")
-      }else{
-        router.replace("/login")
+        router.replace('/home');
+      } else {
+        router.replace('/login');
       }
     };
     loadAuthState();
   }, []);
 
-  const login = async (user : string , password :string) => {
-    const userName = "Daniel"
-    const userPassword = "123456"
-    if(user === userName && userPassword === password){
+  const login = async (user: string, password: string) => {
+    const userName = 'Daniel';
+    const userPassword = '123456';
+    if (user === userName && userPassword === password) {
       await AsyncStorage.setItem('userToken', 'dummyToken');
       setIsAuthenticated(true);
-      router.replace("/home")
+      router.replace('/home');
     }
-    return 
+    return;
   };
 
   const logout = async () => {
     await AsyncStorage.removeItem('userToken');
     setIsAuthenticated(false);
+    router.replace('/login');
   };
 
   return (

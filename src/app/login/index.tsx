@@ -24,6 +24,7 @@ export default function Login() {
       flex={1}
       justifyContent="space-between"
       paddingVertical={20}
+      paddingTop={50}
       backgroundColor="#202024"
     >
       <Image
@@ -54,7 +55,7 @@ export default function Login() {
         <Text textAlign="center" fontWeight={'bold'} color="white">
           Acesse sua conta
         </Text>
-        <Input>
+        <Input height={50}>
           <InputField
             color="white"
             placeholder="E-mail"
@@ -62,7 +63,7 @@ export default function Login() {
             value={email}
           />
         </Input>
-        <Input>
+        <Input height={50}>
           <InputField
             color="white"
             placeholder="Senha"
@@ -71,6 +72,7 @@ export default function Login() {
           />
         </Input>
         <Button
+          height={50}
           onPress={() => login(email, password)}
           backgroundColor="#E42727"
         >

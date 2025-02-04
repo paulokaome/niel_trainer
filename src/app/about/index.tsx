@@ -8,21 +8,24 @@ export default function About() {
   const router = useRouter();
 
   return (
-    <ScrollView>
-      <TouchableOpacity
-        onPress={() => router.replace('/login')}
-        style={{
-          width: 40,
-          height: 40,
-          justifyContent: 'center',
-          alignItems: 'center',
-          borderRadius: '50%',
-        }}
-      >
-        <MaterialIcons name="arrow-back" size={24} color="white" />
-      </TouchableOpacity>
-
-      <Box flex={1} padding={20}>
+    <ScrollView
+      style={{
+        backgroundColor: '#121214',
+      }}
+    >
+      <Box paddingVertical={60} paddingHorizontal={20}>
+        <TouchableOpacity
+          onPress={() => router.replace('/login')}
+          style={{
+            width: 40,
+            height: 40,
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderRadius: '50%',
+          }}
+        >
+          <MaterialIcons name="arrow-back" size={24} color="white" />
+        </TouchableOpacity>
         <Text
           color="white"
           fontWeight={'$bold'}
